@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head></head>
+<body>
+<div class="form">
+    <img th:src="@{/img/__${pokemon.imageFileName}__}" th:alt="${pokemon.commonName}">
+    <br/>
+    <h3 th:text="|Purchase the ${pokemon.commonName} |">Puchase this pokemon</h3>
+    <br/>
+
+<form th:action="@{/updateStock}" method="post" th:object="${pokemon} ">
+    <input type="hidden" th:field="*{id}">
+
+    <label for="purchased">How many do you want to purchase?</label>
+    <br/>
+    <input type="number" id="purchased" th:field="*{purchased}">
+    <input type="submit" value="purchase pokemon">
+</form>
+</div>
+</body>
+</html>

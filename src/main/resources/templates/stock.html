@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="content">
+  <div th:each="po : ${pokemon}" class="pokemon-entry">
+    <h3 th:text="${po.commonName}">COMMON NAME</h3>
+    <p class="species" th:text="'Level: ' +${po.level}">Level</p>
+    <p class="habitat" th:text="'Type: ' + ${po.type}">Type</p>
+    <p class="Stock" th:text="'Stock: ' + ${po.stock}">Stock</p>
+    <p class="Price" th:text="'Price: ' + ${po.price}">price</p>
+    <img th:src="@{/img/__${po.imageFileName}__}" th:alt="${po.commonName}">
+    <br/>
+    <button th:onclick="|document.location='@{/purchase(id=${po.id})}'|">Purchase this pokemon</button>
+  </div>
+</div>
+</body>
+</html>

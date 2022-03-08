@@ -1,0 +1,42 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #defafa;
+}
+
+h3, footer {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+
+
+.pokemon-entry img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px #555 dashed;
+}
+
+header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Righteous', cursive;
+    text-align: center;
+}
+
+
+
+
+
+
+
